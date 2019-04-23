@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/pseudomuto/protokit/compare/v0.2.0...master)
 
+### Changed
+
+* Updated to use go mod over go dep
+
 ## [0.2.0](https://github.com/pseudomuto/protokit/compare/v0.1.0...v0.2.0)
 
 ### Added
