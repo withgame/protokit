@@ -1,12 +1,6 @@
-.PHONY: bench release setup test
+.PHONY: bench release test
 
 VERSION = $(shell cat version.go | sed -n 's/.*const Version = "\(.*\)"/\1/p')
-
-setup:
-	$(info Synching dev tools and dependencies...)
-	@if test -z $(which retool); then go get github.com/twitchtv/retool; fi
-	@retool sync
-	@retool do dep ensure
 
 fixtures/fileset.pb: fixtures/*.proto
 	$(info Generating fixtures...)
@@ -17,9 +11,6 @@ bench:
 
 test: fixtures/fileset.pb
 	@go test -race -cover ./ ./utils
-
-test-ci: fixtures/fileset.pb bench
-	@retool do goverage -race -coverprofile=coverage.txt -covermode=atomic ./ ./utils
 
 release:
 	@echo Releasing v${VERSION}...
