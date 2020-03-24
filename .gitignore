@@ -1,4 +1,4 @@
 /_tools
 /coverage.txt
-/vendor
+vendor/*
 go.sum
