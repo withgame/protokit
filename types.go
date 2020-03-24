@@ -20,7 +20,9 @@ type common struct {
 func newCommon(f *FileDescriptor, path, longName string) common {
 	fn := longName
 	if !strings.HasPrefix(fn, ".") {
-		fn = fmt.Sprintf("%s.%s", f.GetPackage(), longName)
+		if p := f.GetPackage(); p != "" {
+			fn = fmt.Sprintf("%s.%s", p, longName)
+		}
 	}
 
 	return common{
@@ -258,6 +260,9 @@ func (m *Descriptor) GetMessages() []*Descriptor { return m.Messages }
 
 // GetMessageFields returns the message fields
 func (m *Descriptor) GetMessageFields() []*FieldDescriptor { return m.Fields }
+
+// GetFileDescriptor returns the file descriptor
+func (m *Descriptor) GetFileDescriptor() *FileDescriptor { return m.common.file }
 
 // GetEnum returns the enum with the specified name. The name can be either simple, or fully qualified (returns `nil` if
 // not found)
