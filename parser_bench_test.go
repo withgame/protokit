@@ -3,8 +3,8 @@ package protokit_test
 import (
 	"testing"
 
-	"protokit"
-	"protokit/utils"
+	"github.com/pseudomuto/protokit"
+	"github.com/pseudomuto/protokit/utils"
 )
 
 func BenchmarkParseCodeGenRequest(b *testing.B) {

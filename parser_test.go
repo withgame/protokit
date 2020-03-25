@@ -27,17 +27,8 @@ func TestParser(t *testing.T) {
 }
 
 func (assert *ParserTest) SetupSuite() {
-<<<<<<< HEAD
 	registerTestExtensions()
 
-	set, err := utils.LoadDescriptorSet("fixtures", "fileset.pb")
-	assert.NoError(err)
-
-	req := utils.CreateGenRequest(set, "booking.proto", "todo.proto")
-	files := protokit.ParseCodeGenRequest(req)
-	proto2 = files[0]
-	proto3 = files[1]
-=======
 	// File set with package set
 	{
 		set, err := utils.LoadDescriptorSet("fixtures", "fileset.pb")
@@ -58,7 +49,6 @@ func (assert *ParserTest) SetupSuite() {
 		files := protokit.ParseCodeGenRequest(req)
 		noPackage = files[0]
 	}
->>>>>>> a81098c6b2ce862c17e36c23847c8b92e41cd913
 }
 
 func registerTestExtensions() {
@@ -310,7 +300,6 @@ func (assert *ParserTest) TestNestedMessages() {
 	assert.Equal("The status code.", f.GetComments().String())
 }
 
-<<<<<<< HEAD
 func (assert *ParserTest) TestExtendedOptions() {
 	assert.Contains(proto2.OptionExtensions, "com.pseudomuto.protokit.v1.extend_file")
 
@@ -407,11 +396,11 @@ func (assert *ParserTest) TestExtendedOptions() {
 	extendedValue, ok = enumValue.OptionExtensions["com.pseudomuto.protokit.v1.extend_enum_value"].(*bool)
 	assert.True(ok)
 	assert.True(*extendedValue)
-=======
+}
+
 func (assert *ParserTest) TestNoPackage() {
 	assert.Equal("", noPackage.GetPackage())
 
 	m := noPackage.GetMessage("Outer")
 	assert.Equal("Outer", m.GetFullName())
->>>>>>> a81098c6b2ce862c17e36c23847c8b92e41cd913
 }
