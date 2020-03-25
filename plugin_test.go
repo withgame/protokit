@@ -9,8 +9,8 @@ import (
 	"errors"
 	"testing"
 
-	"protokit"
-	"protokit/utils"
+	"github.com/withgame/protokit"
+	"github.com/withgame/protokit/utils"
 )
 
 type PluginTest struct {

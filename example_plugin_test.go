@@ -3,7 +3,7 @@ package protokit_test
 import (
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/protoc-gen-go/plugin"
-	"protokit"
+	"github.com/withgame/protokit"
 
 	"log"
 )

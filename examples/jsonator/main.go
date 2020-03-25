@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/protoc-gen-go/plugin"
-	"protokit"
+	"github.com/withgame/protokit"
 	"google.golang.org/genproto/googleapis/api/annotations"
 
 	"bytes"

@@ -5,7 +5,7 @@ import (
 
 	"testing"
 
-	"protokit/utils"
+	"github.com/withgame/protokit/utils"
 )
 
 type StringsTest struct {

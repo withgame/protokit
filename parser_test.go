@@ -7,8 +7,8 @@ import (
 
 	"testing"
 
-	"protokit"
-	"protokit/utils"
+	"github.com/withgame/protokit"
+	"github.com/withgame/protokit/utils"
 )
 
 var (
