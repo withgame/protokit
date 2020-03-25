@@ -1,4 +1,4 @@
-module github.com/pseudomuto/protokit
+module github.com/withgame/protokit
 
 go 1.13
 

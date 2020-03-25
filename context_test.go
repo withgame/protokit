@@ -6,7 +6,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/pseudomuto/protokit"
+	"protokit"
 )
 
 type ContextTest struct {

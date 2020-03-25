@@ -7,8 +7,8 @@ import (
 
 	"testing"
 
-	"github.com/pseudomuto/protokit"
-	"github.com/pseudomuto/protokit/utils"
+	"protokit"
+	"protokit/utils"
 )
 
 var (
